@@ -1,10 +1,4 @@
-use config::Config;
-
-mod affinity;
-mod ccx;
-mod config;
-mod topology;
-mod watch;
+use procpin::{affinity, ccx, config::*, watch};
 
 fn main() {
     if let Err(e) = start() {
