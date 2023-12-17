@@ -27,5 +27,5 @@ ffmpeg = [2, 3] # Pin ffmpeg to either CCX 3 or 4.
 
 ## Why would I want to pin processes?
 
-AMD's Zen series of architectures group cores into core complexes (commonly referred to as CCXes) with a shared L3 cache. When the scheduler moves processes to a different CCX there can be a performance penalty as theres higher latency to access L3 cache in the other complex, which can be critical for games. On top of that, starting with Zen 2 processors are built using multiple chips per socket called "chiplets", if a process moves between chiplets there is an even larger latency penalty and performance can be drastically impacted.
+AMD's [Zen](https://en.wikipedia.org/wiki/Zen_(microarchitecture)) series of architectures group cores into core complexes (commonly referred to as CCXes) with a shared L3 cache. When the scheduler moves processes to a different CCX there can be a performance penalty as there's higher latency to access L3 cache in the other complex, which can be critical for games. On top of that, starting with Zen 2, processors are built using multiple chips per socket called "chiplets". If a process moves between chiplets there is an even larger latency penalty and performance can be drastically impacted.
 
