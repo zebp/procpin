@@ -43,7 +43,7 @@ pub fn set_affinity(
     process: &Process,
     preference: &CcxPreference,
     ccxes: &[Ccx],
-) -> Result<(), Box<dyn std::error::Error>> {
+) -> Result<bool, Box<dyn std::error::Error>> {
     let prefered_cpu_set = preference.cpuset(&ccxes)?;
     let proc_cpu_set = sched::sched_getaffinity(process.pid)?;
 
